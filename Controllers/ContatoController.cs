@@ -27,5 +27,13 @@ namespace ProcessoSeletivoBLUE.Controllers
                 return NotFound("Não há contatos");
             return Ok(contatos);
         }
+
+        [HttpPost]
+        public IActionResult Create (Contato contato)
+        {
+            _context.Contatos.Add(contato);
+            _context.SaveChanges();
+            return Ok(contato);
+        }
     }
 }
