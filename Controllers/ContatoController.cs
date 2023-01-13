@@ -40,7 +40,7 @@ namespace ProcessoSeletivoBLUE.Controllers
         public IActionResult Update(int id, Contato contato)
         {
             var ContatoBanco = _context.Contatos.Find(id);
-            
+
             ContatoBanco.Nome = contato.Nome;
             ContatoBanco.Email = contato.Email;
             ContatoBanco.Numero = contato.Numero;
@@ -49,6 +49,17 @@ namespace ProcessoSeletivoBLUE.Controllers
             _context.SaveChanges();
 
             return Ok(ContatoBanco);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete (int id)
+        {
+            var ContatoBanco = _context.Contatos.Find(id);
+
+            _context.Contatos.Remove(ContatoBanco);
+            _context.SaveChanges();
+
+            return Ok($"Contato {ContatoBanco.Nome} deletado!");
         }
     }
 }
