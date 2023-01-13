@@ -23,8 +23,10 @@ namespace ProcessoSeletivoBLUE.Controllers
         public IActionResult Read()
         {
             var contatos = _context.Contatos.ToList();
+
             if (!contatos.Any())
-                return NotFound("Não há contatos");
+                return NotFound("Não há contatos na sua agenda!");
+
             return Ok(contatos);
         }
 
@@ -41,25 +43,31 @@ namespace ProcessoSeletivoBLUE.Controllers
         {
             var ContatoBanco = _context.Contatos.Find(id);
 
-            ContatoBanco.Nome = contato.Nome;
-            ContatoBanco.Email = contato.Email;
-            ContatoBanco.Numero = contato.Numero;
+            if (ContatoBanco == null)
+                return NotFound($"O contato {id} não existe!");
+            
+            else
+                ContatoBanco.Nome = contato.Nome;
+                ContatoBanco.Email = contato.Email;
+                ContatoBanco.Numero = contato.Numero;
 
-            _context.Contatos.Update(ContatoBanco);
-            _context.SaveChanges();
+                _context.Contatos.Update(ContatoBanco);
+                _context.SaveChanges();
 
-            return Ok(ContatoBanco);
+                return Ok(ContatoBanco);
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete (int id)
         {
             var ContatoBanco = _context.Contatos.Find(id);
+            if (ContatoBanco == null)
+                return NotFound("O contato não existe!");
+            else
+                _context.Contatos.Remove(ContatoBanco);
+                _context.SaveChanges();
 
-            _context.Contatos.Remove(ContatoBanco);
-            _context.SaveChanges();
-
-            return Ok($"Contato {ContatoBanco.Nome} deletado!");
+                return Ok($"Contato {ContatoBanco.Nome} deletado!");
         }
     }
 }
