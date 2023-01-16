@@ -2,14 +2,10 @@
     <tbody>
         <tr v-for="(pessoa, index) in contatos" :key="pessoa.id">
             <th scope="row">{{ ++index }}</th>
+            <td v-text="pessoa.id"></td>
             <td v-text="pessoa.nome"></td>
             <td v-text="pessoa.email"></td>
             <td v-text="pessoa.numero"></td>
-            <td>
-                <a href="#">Detalhes</a> &nbsp;
-                <a>Editar</a> &nbsp;
-                <a href="#" @click="deleteData(pessoa.id)">Apagar</a> &nbsp;
-            </td>
         </tr>
     </tbody>
 </template>
@@ -29,8 +25,7 @@ export default {
     },
     methods:{
         getData() {
-            const apiUrl = 'https://localhost:7296/contato';
-            axios.get(apiUrl)
+            axios.get('https://localhost:7296/Contato')
             .then(response => response.data)
             .then(data => {
                 this.contatos = data.sort()

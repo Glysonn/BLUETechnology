@@ -7,7 +7,8 @@
 </template>
 
 <script>
-import BtnAddContato from '@/components/BtnAddContato.vue'
+import BtnAddContato from '@/components/BtnCRUD/BtnAddContato.vue';
+
 import TabelaContatos from '@/components/TabelaContatos.vue'
 export default{
   name: 'HomeView',

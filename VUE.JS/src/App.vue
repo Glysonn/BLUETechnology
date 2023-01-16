@@ -8,6 +8,9 @@
         <li class="nav-item">
         <router-link to="/adicionar" class="nav-link">Adicionar</router-link>
         </li>
+        <li class="nav-item">
+        <router-link to="/editar" class="nav-link">Editar</router-link>
+        </li>
       </ul>
     </nav>
     <hr>

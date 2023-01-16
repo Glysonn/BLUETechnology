@@ -10,7 +10,12 @@ const routes = [
   {
     path: '/adicionar',
     name: 'adicionar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/AdicionarView.vue')
+    component: () => import('../views/AdicionarView.vue')
+   },
+   {
+    path: '/editar',
+    name: 'editar',
+    component: () => import('../views/EditarView.vue')
    }
 ]
 
