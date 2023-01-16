@@ -1,4 +1,3 @@
-<!-- a tabela deve ser preenchida com os dados retornados do endpoind. Dados atuais somente para demonstração-->
 <template>
     <div>
         <table class="table">
@@ -11,25 +10,17 @@
                     
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Glyson</td>
-                    <td>kauaglyson@gmail.com</td>
-                    <td>(81) 983723417</td>
-                    <td>
-                        <a>Detalhes</a> &nbsp;
-                        <a>Editar</a> &nbsp;
-                        <a>Apagar</a> &nbsp;
-                    </td>
-                </tr>
-            </tbody>
+            <TBodyContatos />
         </table>
     </div>
 </template>
 
 <script>
+import TBodyContatos from './TBodyContatos.vue';
 export default {
-    name: 'TabelaContatos'
+    name: 'TabelaContatos',
+    components: {
+        TBodyContatos
+    }
 }
 </script>
