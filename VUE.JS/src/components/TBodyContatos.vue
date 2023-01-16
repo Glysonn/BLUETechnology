@@ -6,6 +6,10 @@
             <td v-text="pessoa.nome"></td>
             <td v-text="pessoa.email"></td>
             <td v-text="pessoa.numero"></td>
+            <td>
+                <router-link to="/editar">Editar</router-link> &nbsp; 
+                <router-link to="/" @click="deleteData(pessoa.id)">Apagar</router-link> &nbsp;
+            </td>
         </tr>
     </tbody>
 </template>
