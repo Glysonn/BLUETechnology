@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/glyson/Desktop/ProcessoSeletivoBLUE/ProcessoSeletivoBLUE.csproj": {}
+    "/home/glyson/Desktop/BLUETechnology/bluefrontend/ASP.NET/ProcessoSeletivoBLUE.csproj": {}
   },
   "projects": {
-    "/home/glyson/Desktop/ProcessoSeletivoBLUE/ProcessoSeletivoBLUE.csproj": {
+    "/home/glyson/Desktop/BLUETechnology/bluefrontend/ASP.NET/ProcessoSeletivoBLUE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/glyson/Desktop/ProcessoSeletivoBLUE/ProcessoSeletivoBLUE.csproj",
+        "projectUniqueName": "/home/glyson/Desktop/BLUETechnology/bluefrontend/ASP.NET/ProcessoSeletivoBLUE.csproj",
         "projectName": "ProcessoSeletivoBLUE",
-        "projectPath": "/home/glyson/Desktop/ProcessoSeletivoBLUE/ProcessoSeletivoBLUE.csproj",
+        "projectPath": "/home/glyson/Desktop/BLUETechnology/bluefrontend/ASP.NET/ProcessoSeletivoBLUE.csproj",
         "packagesPath": "/home/glyson/.nuget/packages/",
-        "outputPath": "/home/glyson/Desktop/ProcessoSeletivoBLUE/obj/",
+        "outputPath": "/home/glyson/Desktop/BLUETechnology/bluefrontend/ASP.NET/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/glyson/.nuget/NuGet/NuGet.Config"

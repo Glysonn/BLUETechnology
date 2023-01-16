@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f1KbFoRRKFE9pZETSWKQbLZQXToTrFDnzirYl9BOpS2gYX6Q459FMZtDl7fe9C9GOcd9peCQgoGY8kHdIoILtw==",
+  "dgSpecHash": "hTD6QHkNHA8YKSqUn4L1rd2J8lgEw+ufJIMIfXr4Qxdw1nnd42rsHi0nf8cXbG03ncHBLRUwDehBtEOpyZyUDA==",
   "success": true,
-  "projectFilePath": "/home/glyson/Desktop/ProcessoSeletivoBLUE/ProcessoSeletivoBLUE.csproj",
+  "projectFilePath": "/home/glyson/Desktop/BLUETechnology/bluefrontend/ASP.NET/ProcessoSeletivoBLUE.csproj",
   "expectedPackageFiles": [
     "/home/glyson/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/glyson/.nuget/packages/microsoft.entityframeworkcore/7.0.2/microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
