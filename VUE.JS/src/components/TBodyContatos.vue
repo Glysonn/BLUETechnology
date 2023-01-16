@@ -2,13 +2,13 @@
     <tbody>
         <tr v-for="(pessoa, index) in contatos" :key="pessoa.id">
             <th scope="row">{{ ++index }}</th>
-            <td>{{ pessoa.nome }}</td>
-            <td>{{ pessoa.email }}</td>
-            <td>{{ pessoa.numero }}</td>
+            <td v-text="pessoa.nome"></td>
+            <td v-text="pessoa.email"></td>
+            <td v-text="pessoa.numero"></td>
             <td>
-                <a>Detalhes</a> &nbsp;
+                <a href="#">Detalhes</a> &nbsp;
                 <a>Editar</a> &nbsp;
-                <a>Apagar</a> &nbsp;
+                <a href="#" @click="deleteData(pessoa.id)">Apagar</a> &nbsp;
             </td>
         </tr>
     </tbody>
@@ -35,8 +35,17 @@ export default {
             .then(data => {
                 this.contatos = data.sort()
             })
-            .catch('Erro ao carregar dados:');
-            }
+            .catch(error => {console.log(error);});
+        },
+        deleteData(id) {
+            axios.delete(`https://localhost:7296/Contato/delete/${id}`)
+            .then(response => response.data)
+            .then(data=> {
+                alert("Contato deletado!");
+                this.getData();
+            })
+            .catch(error => {console.log(error);});
+        }
     }
 }
 </script>
