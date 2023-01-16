@@ -20,5 +20,20 @@
 
 export default{
     name: 'FormAddContato',
+    data() {
+        return {
+            form: {
+                nome: '',
+                email: '',
+                numero: '',
+            }
+        }
+    },
+    methods: {
+        postData() {
+            const apiUrl = "https://localhost:7296/Contato";
+
+        }
+    }
 }
 </script>

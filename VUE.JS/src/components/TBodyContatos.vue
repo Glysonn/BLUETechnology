@@ -1,7 +1,7 @@
 <template>
     <tbody>
-        <tr v-for="pessoa in contatos" :key="pessoa.id">
-            <th scope="row">{{ pessoa.id }}</th>
+        <tr v-for="(pessoa, index) in contatos" :key="pessoa.id">
+            <th scope="row">{{ ++index }}</th>
             <td>{{ pessoa.nome }}</td>
             <td>{{ pessoa.email }}</td>
             <td>{{ pessoa.numero }}</td>
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
     name: 'TBodyContatos',
     data () {
@@ -28,8 +30,8 @@ export default {
     methods:{
         getData() {
             const apiUrl = 'https://localhost:7296/contato';
-            fetch(apiUrl)
-            .then(response => response.json())
+            axios.get(apiUrl)
+            .then(response => response.data)
             .then(data => {
                 this.contatos = data.sort()
             })
