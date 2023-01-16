@@ -30,6 +30,18 @@ namespace ProcessoSeletivoBLUE.Controllers
             return Ok(contatos);
         }
 
+        // buscar informação pelo id
+        [HttpGet ("{id}")]
+        public IActionResult Read(int id)
+        {
+            var contato = _context.Contatos.Find(id);
+
+            if (contato == null)
+                return NotFound("Este contato não existe na sua agenda!");
+
+            return Ok(contato);
+        }
+
         [HttpPost]
         public IActionResult Create(Contato contato)
         {
@@ -38,7 +50,7 @@ namespace ProcessoSeletivoBLUE.Controllers
             return Ok(contato);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("update/{id}")]
         public IActionResult Update(int id, Contato contato)
         {
             var ContatoBanco = _context.Contatos.Find(id);
@@ -57,7 +69,7 @@ namespace ProcessoSeletivoBLUE.Controllers
                 return Ok(ContatoBanco);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public IActionResult Delete (int id)
         {
             var ContatoBanco = _context.Contatos.Find(id);
