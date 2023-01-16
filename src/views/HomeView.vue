@@ -1,6 +1,7 @@
 <template>
   <div>
     <BtnAddContato />
+    <br>
     <TabelaContatos />
   </div>
 </template>
