@@ -1114,11 +1114,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/glyson/Desktop/BLUETechnology/bluefrontend/ASP.NET/ProcessoSeletivoBLUE.csproj",
+      "projectUniqueName": "/home/glyson/Desktop/BLUETechnology/BLUETechnology/ASP.NET/ProcessoSeletivoBLUE.csproj",
       "projectName": "ProcessoSeletivoBLUE",
-      "projectPath": "/home/glyson/Desktop/BLUETechnology/bluefrontend/ASP.NET/ProcessoSeletivoBLUE.csproj",
+      "projectPath": "/home/glyson/Desktop/BLUETechnology/BLUETechnology/ASP.NET/ProcessoSeletivoBLUE.csproj",
       "packagesPath": "/home/glyson/.nuget/packages/",
-      "outputPath": "/home/glyson/Desktop/BLUETechnology/bluefrontend/ASP.NET/obj/",
+      "outputPath": "/home/glyson/Desktop/BLUETechnology/BLUETechnology/ASP.NET/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/glyson/.nuget/NuGet/NuGet.Config"
