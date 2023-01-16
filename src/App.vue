@@ -1,9 +1,18 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+        <router-link to="/" class="nav-link">Home</router-link>
+        </li>
+        <li class="nav-item">
+        <router-link to="/adicionar" class="nav-link">Adicionar</router-link>
+        </li>
+      </ul>
+    </nav>
+    <hr>
+    <router-view/>
+  </div>
 </template>
 
 <style>
