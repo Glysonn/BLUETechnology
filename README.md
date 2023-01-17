@@ -1,7 +1,7 @@
 
 # Teste - CRUD agenda
 
-Um CRUD de uma agenda realizado como parte do processo seletivo para a empresa Blue Technology. A agenda conta com as quatro operações básicas de um CRUD. Os arquivos Vue.js (front-end) se encontram na pasta VUE.JS e os .NET (back-end) se encontram na pasta ASP.NET
+Um CRUD de uma agenda realizado como parte do processo seletivo para a empresa Blue Technology. A agenda conta com as quatro operações básicas de um CRUD.
 
 A aplicação foi feita em:
   * Vue.js 3
@@ -40,9 +40,9 @@ https://localhost:7296
   GET /Contato
 ```
 
-| Parâmetro | Tipo     | Descrição                       | Retorno
-| :-------- | :------- | :-------------------------------- | :-----------
-|  |  | **Required**.  Sem parâmetros.| Objeto JSON com todos os contatos salvos.
+| Descrição                       | Retorno
+| :-------------------------------- | :-----------
+|  Sem parâmetros.| Objeto JSON com todos os contatos salvos.
 
 #### Retorna um contato específico
 
@@ -61,7 +61,7 @@ https://localhost:7296
 ```
 
 | Parâmetro | Tipo     | Descrição                         |       
-| :-------- | :------- | :-------------------------------- ||
+| :-------- | :------- | :-------------------------------- |
 | `id`      | `int` | **NOT Required: AutoIncrement**.|
 | `nome` | `string `| **Required**.| 
 | `email`| `string `| **Required**.| 
